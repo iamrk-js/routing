@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <h2>{{isInEditMode ? 'Update Product' :'Add New Product'}}</h2>
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="pName">Product Name</label>
+                <input type="text" formControlName="pName" class="form-control" id="pName">
+            </div>
+            <div class="form-group">
+                <label for="pStatus">Product Name</label>
+                <select name="" id="pStatus" formControlName="pStatus" class="form-control">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Dispathched">Dispathched</option>
+                    <option value="Delevered">Delevered</option>
+                </select>
+            </div>
+            <div class="text-right">
+                <button class="btn btn-primary"
+                (click)="onUpdateProduct()"
+                [type]="isInEditMode ? 'button' : 'submit'">
+                    {{isInEditMode ? "Update Product" : "Add Product"}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

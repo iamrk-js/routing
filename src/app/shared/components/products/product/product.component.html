@@ -1,0 +1,17 @@
+<p class="alert alert-info mb-4">
+  The Product is
+  <strong>
+    {{ productObj.pName }}</strong> and its status is <strong>{{ productObj.pStatus }}</strong>
+</p>
+
+<button class="btn btn-success"
+[routerLink]="['edit']"
+[queryParamsHandling]="'preserve'"
+>Edit Product</button>
+
+
+<hr>
+<!-- 
+<button class="btn btn-success"
+[routerLink]="['/products', 3]"
+>Iphone 14</button> -->

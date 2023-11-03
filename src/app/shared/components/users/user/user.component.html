@@ -1,0 +1,15 @@
+<p class="alert alert-info mb-4">
+    The Product is
+    <strong>
+      {{ userObj.userName }}</strong> and the userrole  is 
+      <strong>{{ userObj.userRole }}</strong>
+  </p>
+
+  <button class="btn btn-success"
+  [routerLink]="['/users', userObj.userId, 'edit']"
+  >Edit User</button>
+
+  <hr>
+  <!-- <button class="btn btn-info"
+  [routerLink]="['/users', 3]"
+  >Load May Doe Info</button> -->

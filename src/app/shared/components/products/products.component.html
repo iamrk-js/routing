@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-success my-4"
+    routerLink="add"
+    >Add New Product</button>
+  </div>
+  <div class="col-md-4">
+   
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let prod of prodsArr"
+        [routerLink]="[prod.pId]"
+        
+        [queryParams]="{
+          canEdit : prod.canReturn
+        }"
+      >
+        {{ prod.pName }}
+      </li>
+    </ul>
+
+    <!-- <button class="btn btn-primary"
+    [routerLink]="['/users']"
+    >Go to Users</button> -->
+   
+  </div>
+  <div class="col-md-8">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!-- 
+Absolute routing  >> base url >>  http://localhost:4200
+http://localhost:4200/products/1
+
+Relative routing  >> current url >> http://localhost:4200/products
+http://localhost:4200/products/products/1 -->
